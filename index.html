@@ -29,7 +29,7 @@
             </ul>
         </navbar>
     </header>
-    <main class="main">
+    <main class="main" id="main">
         <section class="description">
             <h1 class="description-title">Modern interior</h1>
             <p class="description-text">A full-Service residential & commercial interior design and staging company offering professional
@@ -51,7 +51,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <span class="footer-text">created by <a href="https://github.com/NahuelZamuner" target="_blank"
                 class="footer-link">Nahuel Zamuner</a> - <a href="https://devchallenges.io/" class="footer-link"
                 target="_blank">devChallenges.io</a></span>
@@ -60,6 +60,8 @@
         const $buttonMenu = document.getElementById('menu-button')
         const $hiddenMenu = document.getElementById('menu-close')
         const $pageMenu = document.getElementById('list-menu')
+        const $main = document.getElementById('main')
+        const $footer = document.getElementById('footer')
 
         $buttonMenu.addEventListener('click', () => {
             $buttonMenu.classList.add('menu-hidden')
@@ -67,6 +69,8 @@
             $pageMenu.classList.remove('menu-list__hidden')
             $pageMenu.classList.remove('menu-hidden')
             $pageMenu.classList.add('menu-list')
+            $main.classList.add('menu-hidden')
+            $footer.classList.add('menu-hidden')
         })
 
         $hiddenMenu.addEventListener('click', () => {
@@ -74,6 +78,8 @@
             $pageMenu.classList.add('menu-list__hidden')
             $buttonMenu.classList.remove('menu-hidden')
             $pageMenu.classList.add('menu-hidden')
+            $main.classList.remove('menu-hidden')
+            $footer.classList.remove('menu-hidden')
             $pageMenu.classList.remove('menu-list')
         })
     </script>
