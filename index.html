@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./CSS/assets/devchallenges.png" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Interior consultant</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-title">THIS INTERIOR</div>
+        <navbar>
+            <img src="./CSS/assets/menu.svg" alt="" class="menu-visible" id="menu-button">
+            <img src="./CSS/assets/close.svg" alt="" class="menu-visible menu-hidden" id="menu-close">
+            <ul class="menu-list menu-list__hidden" id="list-menu">
+                <li><a href="#" class="menu-list__item">Home</a></li>
+                <li><a href="#" class="menu-list__item">Collection</a></li>
+                <li><a href="#" class="menu-list__item">About</a></li>
+                <li><a href="#" class="menu-list__item">Contact</a></li>
+            </ul>
+        </navbar>
+    </header>
+    <main class="main">
+        <section class="description">
+            <h1 class="description-title">Modern interior</h1>
+            <p class="description-text">A full-Service residential & commercial interior design and staging company offering professional
+                organizing & eco-services.</p>
+            <a href="#" class="description-link">Read more <img src="./CSS/assets/arrow.svg" alt=""></a>
+        </section>
+        <section class="presentation">
+            <img src="./CSS/assets/photo1.png" alt="" class="presentation-img">
+            <div class="container">
+                <div class="card">
+                    <img src="./CSS/assets/photo2.png" alt="" class="card-img">
+                    <p class="card-title">
+                        Aliza Webber
+                        <br>
+                        <span class="card-subtitle">Interior designer</span>
+                    </p>
+                </div>
+                <h2 class="container-text">Designed in 2020 by Aliza Webber</h2>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <span class="footer-text">created by <a href="https://github.com/NahuelZamuner" target="_blank"
+                class="footer-link">Nahuel Zamuner</a> - <a href="https://devchallenges.io/" class="footer-link"
+                target="_blank">devChallenges.io</a></span>
+    </footer>
+    <script>
+        const $buttonMenu = document.getElementById('menu-button')
+        const $hiddenMenu = document.getElementById('menu-close')
+        const $pageMenu = document.getElementById('list-menu')
+
+        $buttonMenu.addEventListener('click', () => {
+            $buttonMenu.classList.add('menu-hidden')
+            $hiddenMenu.classList.remove('menu-hidden')
+            $pageMenu.classList.remove('menu-list__hidden')
+            $pageMenu.classList.remove('menu-hidden')
+            $pageMenu.classList.add('menu-list')
+        })
+
+        $hiddenMenu.addEventListener('click', () => {
+            $hiddenMenu.classList.add('menu-hidden')
+            $pageMenu.classList.add('menu-list__hidden')
+            $buttonMenu.classList.remove('menu-hidden')
+            $pageMenu.classList.add('menu-hidden')
+            $pageMenu.classList.remove('menu-list')
+        })
+    </script>
+</body>
+
+</html>
