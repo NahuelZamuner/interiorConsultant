@@ -11,7 +11,7 @@ Solution for a challenge from [Devchallenges.io](http://devchallenges.io)
 <h2>Overview</h2>
 Create a homepage following the design. The page should be responsive. 
 
-![ScreenShoot Mobile Version](./CSS/assets/screenshoot.png)
+![ScreenShoot Mobile Version](./CSS/assets/screenshot.png)
 
 <h2>Built with:</h2>
 
